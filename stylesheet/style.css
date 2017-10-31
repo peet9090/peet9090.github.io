@@ -1,0 +1,230 @@
+/* Huisstijl Transavia toegepast */
+/* CSS RESET */
+*{
+	 box-sizing: border-box;
+	 margin: 0;
+	 padding:0;
+	 border:0;
+}
+
+
+/* Fonts */ 
+@font-face{
+	font-family:'transavia';
+	src: url('../font/NexaBold.otf');
+}
+
+@font-face{
+	font-family:'transavialight';
+	src: url('../font/NexaLight.otf');
+}
+
+/* Body */
+body{
+	background-color: #f2f2f2;
+	font-family: 'transavia';
+	color: #232323;
+}
+
+h1{
+	color:#00d66c;
+	font-size: 2.375rem;
+	margin-top: 0.6em;
+	
+}
+
+/* Header */ 
+
+.material-icons{
+	color:#2800a0;
+	top:0.25em;
+	right: 0.25em;
+	position: relative;
+}
+
+
+a {
+	font-size: 1em;
+	color: #00d66c;	
+	text-decoration: none;
+}
+
+a:hover{
+	color:#2800a0;
+}
+
+header{
+	background-color: #fff;
+	width: 100%;
+	height: 3em;
+	line-height: 3em;
+	box-shadow: 0 0.3125em 0.625em 0 rgba(0,0,0,.15);
+	position: relative;
+	z-index: 99;
+}
+
+header a{
+	float: right;
+	padding: 0em 1em;
+}
+
+header a:first-of-type{
+	float: left;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+/* main */
+main{
+	
+}
+
+main >div{
+	background-image: url(../images/header-week42-NL.jpg);
+	padding: 2em 45em 10em 2.5em;
+	background-size:cover;
+	background-repeat: no-repeat;
+}
+
+main .trans{
+	background-color: rgba(255,255,255,.7);
+  min-width: 20rem;
+  padding: 1em;
+  border-radius: .75em;
+}
+
+main .trans p{
+	background-color: white;
+  margin: -1em;
+  border-radius: .75em .75em 0em 0em;
+  display: grid;
+  padding: 1em;
+	min-width: 20rem;
+}
+
+h3{
+	padding:0.5em 0em 0.5em 0em;
+}
+
+span{
+	font-family: "transavia";
+}
+
+section{
+	background-color: #f2f2f2;
+	max-width: 80rem;
+	margin:0 auto;
+	padding: 2em;
+	display: grid;
+  grid-template: auto repeat(3, 1fr) / repeat(3, 1fr);
+  grid-gap: 2em 2em;
+}
+
+section h2 {
+	grid-column:1 / 4
+}
+
+article {
+  background-color: rgba(255, 255, 255, 0.8);
+	border-radius: .75em;
+  max-width: 24em;
+	width: 100%;
+	padding:2em;
+}
+
+article a {
+	padding:0.5em 0em 0.5em 0em;
+	display: inline-block;
+}
+
+article > a{
+}
+
+article img{
+	width:100%;
+	width: calc(100% + 4em);
+	margin:-2em -2em 0 -2em;
+	border-radius:.75em .75em 0 0;
+}
+
+span {
+	padding:0.5em 0.5em 0.5em 0em;
+}
+
+button {
+	background-color: #ff3268;
+  box-shadow: inset 0 -0.1875em 0.0625em #ca2b55;
+	color:#fff!important;
+	border-radius: 1.25em;
+  font-weight: bold;
+  cursor: pointer;
+	padding: 0em 2em 1em 2em;
+}
+
+button .material-icons{
+	top:0.3em;
+	color:#fff;
+}
+
+select{
+    border: .0625rem solid #91a3b7;
+    color: #606060;
+    font-size: 1rem;
+    border-radius: .5rem;
+    -webkit-appearance: none;
+		padding:0.5em;
+		background-image: url(../images/ic_arrow_drop_down_black_24dp_2x.png);
+		background-repeat: no-repeat;
+		background-position: calc(100% - 0.2em) -0.4em;
+}
+
+main form:nth-child(2) fieldset{
+	background-color: #fff;
+	text-align: center;
+	opacity: 0.85;
+	padding:1.2em;
+	margin-top: -3.6em;
+}
+
+
+main form:nth-child(3) {
+	background-color: #00d66c;
+	padding:0.7em 2em;
+	display: flex;
+	justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+main p{
+	padding-top:0.5em;
+	font-family: "transavialight";
+}
+
+label{
+	padding:2em;
+}
+
+input{
+    padding: 0 .5rem;
+    line-height: 2.3rem;
+    border: .0625rem solid #91a3b7;
+    color: #606060;
+    font-size: 1rem;
+    border-radius: .5rem;
+}
+
+
+
+@media (max-width:49em) {
+		main > section {
+		grid-template-columns: 50% 50%;
+	}
+}
+
+@media (max-width:60em) {
+	main > section {
+	/*grid-template-columns: 30em 30em;
+	}
+}
