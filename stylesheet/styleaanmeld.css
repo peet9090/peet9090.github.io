@@ -103,8 +103,9 @@ legend{
 	background-color: white;
   min-width: 14em;
   border-radius: .75em .75em 0 0;
-  padding: .3em;
+  padding: .5em;
 	margin-bottom: 1em;
+	color:#00d66c;
 }
 
 input{
