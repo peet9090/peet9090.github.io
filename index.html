@@ -15,7 +15,7 @@
 	<header>
 		
 			<a href="index.html">Travelstory</a>
-			<a href="Aanmelden.html"><i class="material-icons">person</i>Inloggen/registreren</a>
+			<a href="Aanmelden.html"><i class="material-icons">person</i>Inlog</a>
       <a href="Aanmelden.html"><i class="material-icons">bookmark</i>Verhalen</a>
        
 	</header>
@@ -23,7 +23,7 @@
 	<main>
 		<div>
 			<div class="trans">
-				<p><span>10-10-2017</span>Aanbevolen verhaal van vandaag:</p>
+				<p><span>10-10-2017</span>Aanbevolen verhaal van de dag:</p>
 				<h1>Nichterig en meer</h1>
 			</div>
 	 	</div>
@@ -33,6 +33,7 @@
 	<!-- Filter optie -->		
 		<form>
 				<fieldset>
+				<span>Filter verhalen:</span>
 				<label for="time">lees tijd <input type="checkbox" name="time" id="time"></label>
 				<label for="time">Positief <input type="checkbox" name="time" id="time"></label>
 				<label for="time">Realistisch <input type="checkbox" name="time" id="time"></label>
@@ -46,14 +47,15 @@
 		<form>
 			<fieldset>
 				<select name="select"> 
+ 					<option value="value1" selected>Sorteer verhalen</option> 
   				<option value="value1">Lengte</option> 
-  				<option value="value2" selected>a tot z</option>
+  				<option value="value2">a tot z</option>
   				<option value="value3">Aantal hartjes</option>
 				</select>
 			</fieldset>
 			
 			<fieldset>
-				<input class="search" placeholder="Vul hier een titel in" />
+				<input class="search" placeholder="Klik voor invoer"/>
   			<button class="sort" data-sort="name"><i class="material-icons">search</i>Zoek verhaal</button>
 			</fieldset>
 		</form>	
