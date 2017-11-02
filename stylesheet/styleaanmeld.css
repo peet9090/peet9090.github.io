@@ -147,6 +147,7 @@ input[type=submit]{
 	margin: 1em 0em 2em 0em;
 	border: none !important;
 	transition:none;
+	-webkit-appearance: none;
 }
 
 input[type=submit]:hover{
