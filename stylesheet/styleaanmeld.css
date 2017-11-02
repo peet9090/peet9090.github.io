@@ -1,15 +1,15 @@
 /* Huisstijl Transavia toegepast */
 /* CSS RESET */
 *{
-	 box-sizing: border-box;
-	 margin: 0;
-	 padding:0;
-	 border:0;
+	box-sizing: border-box;
+	margin: 0;
+	padding:0;
+	border:0;
 }
 
 /* Fonts */ 
 @font-face{
-	font-family:'transavia';
+ 	font-family:'transavia';
 	src: url('../font/NexaBold.otf');
 }
 
@@ -25,17 +25,7 @@ body{
 	color: #232323;
 }
 
-
-/* Header */ 
-
-.material-icons{
-	color:#2800a0;
-	top:0.25em;
-	right: 0.25em;
-	position: relative;
-}
-
-
+/* Algemeen */ 
 a {
 	font-size: 1em;
 	color: #00d66c;	
@@ -45,6 +35,15 @@ a {
 
 a:hover{
 	color:#2800a0;
+}
+
+/* Header */ 
+
+.material-icons{
+	color:#2800a0;
+	top:0.25em;
+	right: 0.25em;
+	position: relative;
 }
 
 header{
@@ -68,7 +67,7 @@ header a:first-of-type{
 	font-weight: bold;
 }
 
-/* Formulier */
+/* Formulier main */
 main{
 	background-color: #f3e5d8;
 }
@@ -78,6 +77,16 @@ span{
 	font-style: italic;
   font-size: x-small;
 	color:#ff3268;
+	animation-name: example;
+	animation-duration: 2s;
+	animation-delay: 3s;
+	position: relative;
+	animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0%   {color: #2800a0 ;top:0px;}
+  100% {color: #ff3268 ;top:-2px;}
 }
 
 form {
@@ -87,15 +96,6 @@ form {
   margin: 0 auto;
   margin-top: 2em;
   border-radius: 1.75em;
-}
-
-fieldset{
-	
-}
-
-label{
-	display: grid;
-	padding: 0.4em;
 }
 
 legend{
@@ -108,14 +108,33 @@ legend{
 	color:#00d66c;
 }
 
+label{
+	display: grid;
+	padding: 0.4em;
+}
+
 input{
   padding: 0 .5rem;
   line-height: 2.3rem;
-  border: .0625rem solid #91a3b7;
+  border: .0625rem solid #91a3b7 !important;
   color: #606060;
   border-radius: .5rem;
 	width: 20em;
   margin: 0 auto;
+	outline: none;
+	transition:all .3s;
+}
+
+input:focus{
+	border: .1em solid #2800a0 !important;
+}
+
+input:valid{
+	border: .1em solid #00d66c !important;
+}
+
+input:invalid{
+	border: .1em solid #ff3268;
 }
 
 input[type=submit]{	
@@ -126,20 +145,11 @@ input[type=submit]{
   font-weight: bold;
   cursor: pointer;
 	margin: 1em 0em 2em 0em;
+	border: none !important;
+	transition:none;
 }
 
-/* Mediaqueries */
-
-@media (max-width:60em) {}
-
-
-	
-@media (max-width:48em) {}
-
-
-	
-@media (max-width:40em) {}
-	
-
-
-
+input[type=submit]:hover{
+	background-color: #FF7B9A;
+	box-shadow: inset 0 -0.1875em 0.0625em #ff3268;
+}

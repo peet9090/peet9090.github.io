@@ -1,10 +1,10 @@
 /* Huisstijl Transavia toegepast */
 /* CSS RESET */
 *{
-	 box-sizing: border-box;
-	 margin: 0;
-	 padding:0;
-	 border:0;
+	box-sizing: border-box;
+	margin: 0;
+	padding:0;
+	border:0;
 }
 
 
@@ -30,18 +30,15 @@ h1{
 	color:#00d66c;
 	font-size: 2.375rem;
 	margin-top: 0.6em;
-	
 }
 
-/* Header */ 
-
+/* Algemeen */ 
 .material-icons{
 	color:#2800a0;
 	top:0.25em;
 	right: 0.25em;
 	position: relative;
 }
-
 
 a {
 	font-size: 1em;
@@ -52,6 +49,17 @@ a {
 a:hover{
 	color:#2800a0;
 }
+
+h3{
+	padding:0.5em 0em 0.5em 0em;
+}
+
+span{
+	font-family: "transavia";
+	padding:0.5em 0.5em 0.5em 0em;
+}
+
+/* Header */ 
 
 header{
 	background-color: #fff;
@@ -74,10 +82,22 @@ header a:first-of-type{
 	font-weight: bold;
 }
 
-/* main */
-main{
-	
+#melding{
+	display: none;
+	background-color: #00d66c;
+  width: 15em;
+  padding: 1em;
+  right: 4em;
+  top: 3.7em;
+  margin-right: 2em;
+  color: white;
+  font-size: small;
+  line-height: 1.9em;
+  border-radius: .75em;
+  position: absolute;
 }
+
+/* main */
 
 main >div {
   background-image: url(../images/header-week42-NL.jpg);
@@ -102,12 +122,26 @@ main .trans p{
 	min-width: 20rem;
 }
 
-h3{
-	padding:0.5em 0em 0.5em 0em;
+main form:nth-child(2) fieldset{
+	background-color: #fff;
+	text-align: center;
+	padding:1.2em;
 }
 
-span{
-	font-family: "transavia";
+
+main form:nth-child(3) {
+	background-color: #00d66c;
+	padding: 0.7em 10% 0.7em 10%;
+	display: flex;
+	justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+main p{
+	padding-top:0.5em;
+	font-family: "transavialight";
 }
 
 section{
@@ -135,7 +169,14 @@ article a {
 	display: inline-block;
 }
 
-article > a{
+article a #hart{
+	  animation: pulse 1s ease infinite; 
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.18); }
+  100% { transform: scale(1); }
 }
 
 article img{
@@ -143,10 +184,6 @@ article img{
 	width: calc(100% + 4em);
 	margin:-2em -2em 0 -2em;
 	border-radius:.75em .75em 0 0;
-}
-
-span {
-	padding:0.5em 0.5em 0.5em 0em;
 }
 
 button {
@@ -162,40 +199,24 @@ button {
 button .material-icons{
 	top:0.3em;
 	color:#fff;
+	outline: none;
+}
+
+button:hover{
+	background-color: #FF7B9A;
+	box-shadow: inset 0 -0.1875em 0.0625em #ff3268;
 }
 
 select{
-    border: .0625rem solid #91a3b7;
-    color: #606060;
-    font-size: 1rem;
-    border-radius: .5rem;
-    -webkit-appearance: none;
-		padding:0.5em 3em 0.5em 0.5em;
-		background-image: url(../images/ic_arrow_drop_down_black_24dp_2x.png);
-		background-repeat: no-repeat;
-		background-position: calc(100% - 0.2em) -0.4em;
-}
-
-main form:nth-child(2) fieldset{
-	background-color: #fff;
-	text-align: center;
-	padding:1.2em;
-}
-
-
-main form:nth-child(3) {
-	background-color: #00d66c;
-	padding: 0.7em 10% 0.7em 10%;
-	display: flex;
-	justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-
-main p{
-	padding-top:0.5em;
-	font-family: "transavialight";
+  border: .0625rem solid #91a3b7;
+  color: #606060;
+  font-size: 1rem;
+  border-radius: .5rem;
+  -webkit-appearance: none;
+	padding:0.5em 3em 0.5em 0.5em;
+	background-image: url(../images/ic_arrow_drop_down_black_24dp_2x.png);
+	background-repeat: no-repeat;
+	background-position: calc(100% - 0.2em) -0.4em;
 }
 
 label{
@@ -215,8 +236,14 @@ input{
   border-radius: .5rem;
 }
 
+input:focus{
+	border: .1em solid #2800a0;
+	outline: none;
+}
 
+/* Media Queries */
 
+/* Tablet formaat */
 @media (max-width:60em) {
 
 section h2 {
@@ -225,11 +252,11 @@ section h2 {
 	
 main >div{
 	background-image: url(../images/header-week42-NL.jpg);
-	padding: 2em 20em 10em 2.5em;
-	
+	padding: 2em 20em 10em 2.5em;	
+}
 }
 
-
+/* Klein Tablet formaat */
 @media (max-width:48em) {
 
 main form:nth-child(2) fieldset	{
@@ -243,13 +270,10 @@ main form:nth-child(2) fieldset	label{
 	margin-top: 0.3em;
 	margin-bottom: 0.3em;
 	}
-	
 }
 	
-	
+/* Smartphone formaat */	
 @media (max-width:40em) {
-	
-
 	
 section h2 {
 	grid-column:1 / 2;
@@ -267,6 +291,5 @@ main form:nth-child(3) fieldset{
 button{
 	margin:1em 0em 0em;		
 	}
-	
 }
 

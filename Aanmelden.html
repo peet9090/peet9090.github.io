@@ -26,7 +26,8 @@
   					<fieldset>
     					<legend>Log in of meld u aan</legend>
     						<label for="email">E-mail<input type="email" id="email" required></label>
-    						<label for="password">Wachtwoord<input type="password" id="password" required><a href="#">Wachtwoord vergeten</a></label>
+    						<label for="password">Wachtwoord<input type="password" id="password" required minlength="7"
+       maxlength="20"><a href="#">Wachtwoord vergeten</a></label>
     						<input type="submit" value="Login"/>
    					</fieldset>
 				</form>
@@ -35,8 +36,8 @@
   					<fieldset>
     					<legend>Aanmelden</legend>  					
     						<label for="Name">Voornaam<input id="name" required></label>
-    						<span>Let op! Het account moet worden bevestigd. <br>Vul daarom uw juiste e-mail adres in.</span>
     						<label for="email">E-mail<input type="email" id="email" required></label>
+    						<span>Let op! Het account moet worden bevestigd. <br>Vul daarom uw juiste e-mail adres in.</span>
     						<label for="password">Wachtwoord<input type="password" id="password" required></label>
     						<label for="password">Bevestig Wachtwoord<input type="password" id="password" required></label>
     						<input type="submit" value="Meld aan!"/>
@@ -45,10 +46,7 @@
       </section>     
 	</main>
 
-	
-	
-	<footer>
-		
+	<footer>	
 	</footer>
 
 </body>
