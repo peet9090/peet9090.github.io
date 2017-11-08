@@ -22,24 +22,30 @@
 	
 	<main>
 			<section>
-        <form action="">
+        <form>
   					<fieldset>
     					<legend>Log in of meld u aan</legend>
-    						<label for="email">E-mail<input type="email" id="email" required></label>
-    						<label for="password">Wachtwoord<input type="password" id="password" required minlength="7"
-       maxlength="20"><a href="#">Wachtwoord vergeten</a></label>
+    						<label for="email">E-mail</label>
+    						<input type="email" required>
+    						<label for="password">Wachtwoord</label>
+    						<input type="password" id="password" required minlength="7" maxlength="20">
+    						<a href="#">Wachtwoord vergeten</a>
     						<input type="submit" value="Login"/>
    					</fieldset>
 				</form>
 				
-  			<form action="">
+  			<form>
   					<fieldset>
     					<legend>Aanmelden</legend>  					
-    						<label for="Name">Voornaam<input id="name" required></label>
-    						<label for="email">E-mail<input type="email" id="email" required></label>
-    						<span>Let op! Het account moet worden bevestigd. <br>Vul daarom uw juiste e-mail adres in.</span>
-    						<label for="password">Wachtwoord<input type="password" id="password" required></label>
-    						<label for="password">Bevestig Wachtwoord<input type="password" id="password" required></label>
+    						<label for="Name">Voornaam</label>
+    						<input id="name" required>
+    						<label for="email" id="meldingletop">E-mail</label>
+    						<input type="email" id="email" required>
+    						<span id="letop">Let op! Het account moet worden bevestigd. <br>Vul daarom uw juiste e-mail adres in.</span>
+    						<label for="password">Wachtwoord</label>
+    						<input type="password" id="password" required>
+    						<label for="password">Bevestig Wachtwoord</label>
+    						<input type="password" id="password" required>
     						<input type="submit" value="Meld aan!"/>
   					</fieldset>
 				</form>
@@ -48,6 +54,8 @@
 
 	<footer>	
 	</footer>
+	
+<script src="js/index.js"></script>
 
 </body>
 </html>

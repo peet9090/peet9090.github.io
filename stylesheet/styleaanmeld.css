@@ -72,7 +72,7 @@ main{
 	background-color: #f3e5d8;
 }
 
-span{
+span {
 	font-family: "transavia";
 	font-style: italic;
   font-size: x-small;
@@ -82,6 +82,8 @@ span{
 	animation-delay: 3s;
 	position: relative;
 	animation-iteration-count: infinite;
+	display: none;
+	padding: 1.5em 0;
 }
 
 @keyframes example {
@@ -153,4 +155,12 @@ input[type=submit]{
 input[type=submit]:hover{
 	background-color: #FF7B9A;
 	box-shadow: inset 0 -0.1875em 0.0625em #ff3268;
+}
+
+a{
+	display: block;
+}
+
+.block {
+	display: block;
 }
